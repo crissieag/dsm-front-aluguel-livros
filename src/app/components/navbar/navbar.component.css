@@ -1,0 +1,14 @@
+.navbarContainer {
+	position: absolute;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--lightGrey);
+}
+
+.navBar {
+    background-color: var(--mediumGrey);
+    color: var(--fontColor);
+    padding: 10px 35px;
+}
