@@ -12,16 +12,14 @@ body {
 }
 
 :root {
-    --darkGrey: #313638;
-    --lightGrey: #e0dfd5;
+    --darkGrey: rgb(49, 54, 56);
+    --lightGrey: rgb(224, 223, 213);
     --mediumGrey: #847e89;
     --light: #e8e9eb;
     --green: #254441;
-    --orangeLight: #faa275;
-    --orangeLighter: #ff8c61;
+    --orangeLight: rgb(250, 162, 117);
+    --orangeLighter: hsl(16, 100%, 69%);
     --redLight:#db504a;
     --redDark: #7b0828;
     --fontColor: #333333;
-
-
 }

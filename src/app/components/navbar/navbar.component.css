@@ -4,11 +4,17 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: var(--lightGrey);
-}
+	background: rgb(250, 162, 117);
+	background: radial-gradient(closest-side at 65% 70%, rgba(250, 161, 117, 0.576) 20%, rgba(237, 236, 236, 0.435) 80%);}
 
 .navBar {
-    background-color: var(--mediumGrey);
-    color: var(--fontColor);
-    padding: 10px 35px;
+	background: #fff;
+	border-right: 1px solid rgb(243, 243, 243);
+	border-radius: 10px;
+	box-shadow: 10px 0px 5px 3px rgba(212, 212, 212, 0.09);
+	padding: 10px 50px;
+}
+
+.icon{
+	margin-right: 10px;
 }
