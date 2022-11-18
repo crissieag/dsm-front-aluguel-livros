@@ -8,6 +8,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatListModule } from "@angular/material/list";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatCardModule } from "@angular/material/card";
+import { MatFormFieldModule } from "@angular/material/form-field";
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -40,7 +43,10 @@ import { HomeComponent } from './pages/home/home.component';
     FormsModule,
     HttpClientModule,
     MatListModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatCardModule,
+    MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
