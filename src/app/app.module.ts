@@ -10,7 +10,7 @@ import { MatListModule } from "@angular/material/list";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
-
+import { MatInputModule } from "@angular/material/input";
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -45,7 +45,9 @@ import { HomeComponent } from './pages/home/home.component';
     MatListModule,
     FontAwesomeModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
+
 
   ],
   providers: [],
