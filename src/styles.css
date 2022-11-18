@@ -23,3 +23,23 @@ body {
     --redDark: #7b0828;
     --fontColor: #333333;
 }
+
+.container{
+    background-color: #7b0828;
+    margin: 0 auto;
+    width:50%;
+}
+
+.btnCadastrar{
+
+}
+
+.btnRemover{
+
+}
+
+.input {
+    display: block;
+    color: white;
+    border: 3px solid white;
+}
