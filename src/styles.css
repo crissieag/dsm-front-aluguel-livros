@@ -2,44 +2,87 @@
 *,
 body,
 html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
-    margin: 0;
+	margin: 0;
 }
 
 :root {
-    --darkGrey: rgb(49, 54, 56);
-    --lightGrey: rgb(224, 223, 213);
-    --mediumGrey: #847e89;
-    --light: #e8e9eb;
-    --green: #254441;
-    --orangeLight: rgb(250, 162, 117);
-    --orangeLighter: hsl(16, 100%, 69%);
-    --redLight:#db504a;
-    --redDark: #7b0828;
-    --fontColor: #333333;
+	--darkGrey: rgb(49, 54, 56);
+	--lightGrey: rgb(224, 223, 213);
+	--mediumGrey: #847e89;
+	--light: #e8e9eb;
+	--green: #254441;
+	--orangeLight: rgb(250, 162, 117);
+	--orangeLighter: hsl(16, 100%, 69%);
+	--redLight: #db504a;
+	--redDark: #7b0828;
+	--fontColor: #333333;
 }
 
-.container{
-    background-color: #7b0828;
-    margin: 0 auto;
-    width:50%;
+.box {
+	background-color: #ffffff;
+	margin: 15px auto;
+	max-width: 389px;
+	box-shadow: 0 20px 51px 0 rgba(108, 99, 97, 0.075);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border: 1px solid rgb(243, 243, 243);
+	border-radius: 10px;
 }
 
-.btnCadastrar{
-
+.headerBox{
+    font-weight: 600;
 }
 
-.btnRemover{
-
+.btnCadastrar {
+	margin: 20px auto 0;
+	display: flex;
+	color: var(--orangeLighter);
+	background-color: var(--darkGrey);
+	border: none;
+	border-radius: 5px;
+	padding: 10px 15px;
+    font-weight: 500;
 }
+
+.btnCadastrar:hover {
+	color: var(--darkGrey);
+	background-color: var(--orangeLighter);
+}
+
 
 .input {
-    display: block;
-    color: white;
-    border: 3px solid white;
+	display: block;
+	color: var(--fontColor);
+	border-bottom: 1px solid var(--green);
+	width: 350px;
+	margin: 20px 16px;
+}
+
+.inputEdit{
+	border: none;
+	color:var(--fontColor);
+	background-color: #ffffff;
+}
+.btnAlterarItem{
+	border: none;
+	background-color: #ffffff;
+	color: var(--mediumGrey);
+	margin-left: 10px;
+}
+
+.btnAlterarItem:hover{
+	cursor: pointer;
+	color: var(--redLight);
+
+}
+
+table{
+	margin: 0 auto;
+	text-align: center;	
 }

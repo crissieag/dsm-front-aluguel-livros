@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -21,6 +22,7 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { EditarComponent } from './pages/generos/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { HomeComponent } from './pages/home/home.component';
     LivrosComponent,
     ClientesComponent,
     FuncionariosComponent,
-    HomeComponent
+    HomeComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { HomeComponent } from './pages/home/home.component';
     FontAwesomeModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
 
 
   ],

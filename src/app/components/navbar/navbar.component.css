@@ -4,8 +4,12 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgb(250, 162, 117);
-	background: radial-gradient(closest-side at 65% 70%, rgba(250, 161, 117, 0.576) 20%, rgba(237, 236, 236, 0.435) 80%);}
+	box-shadow: 0 20px 51px 0 rgba(108, 99, 97, 0.075);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border: 1px solid rgb(243, 243, 243);
+	border-radius: 10px;
+}
 
 .navBar {
 	background: #fff;
@@ -17,4 +21,14 @@
 
 .icon{
 	margin-right: 10px;
+}
+
+a:hover{
+	color: var(--orangeLighter);
+	background-color: var(--darkGrey);
+}
+
+.mainContainer {
+	padding: 25px 0;
+	background-color: #fefafa;
 }

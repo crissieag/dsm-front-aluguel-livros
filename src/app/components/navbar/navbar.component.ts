@@ -5,7 +5,7 @@ import {
 	faBookOpenReader,
 	faBook,
 	faBookmark,
-  faLandmark
+	faLandmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
 	faBookOpenReader = faBookOpenReader;
 	faBook = faBook;
 	faBookmark = faBookmark;
-  faLandmark = faLandmark;
+	faLandmark = faLandmark;
 	constructor() {}
 
 	ngOnInit(): void {}
