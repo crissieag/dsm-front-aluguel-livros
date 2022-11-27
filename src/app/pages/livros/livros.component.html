@@ -1,1 +1,121 @@
-<p>livros works!</p>
+<mat-card class="box" id="cadastrar">
+	<mat-card-header class="headerBox">
+		<mat-card-title> Cadastrar Livro </mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-form-field floatLabel="never" class="input" id="titulo">
+			<input
+				matInput
+				type="text"
+				name="txtLivro"
+				id="txtLivro"
+				placeholder="Titulo"
+				[(ngModel)]="titulo"
+			/>
+		</mat-form-field>
+		<mat-form-field floatLabel="never" class="input" id="autor">
+			<input
+				matInput
+				type="text"
+				name="txtAutor"
+				id="txtAutor"
+				placeholder="Autor"
+				[(ngModel)]="autor"
+			/>
+		</mat-form-field>
+		<mat-form-field floatLabel="never" class="input" id="publicacao">
+			<input
+				matInput
+				type="text"
+				name="txtPublicacao"
+				id="txtPublicacao"
+				placeholder="Ano de Publicacao"
+				[(ngModel)]="publicacao"
+			/>
+		</mat-form-field>
+		<mat-form-field floatLabel="never" class="input" id="paginas">
+			<input
+				matInput
+				type="text"
+				name="txtPaginas"
+				id="txtPaginas"
+				placeholder="Páginas"
+				[(ngModel)]="paginas"
+			/>
+		</mat-form-field>
+		<mat-form-field floatLabel="never" class="input" id="editora">
+			<input
+				matInput
+				type="text"
+				name="txtEditora"
+				id="txtEditora"
+				placeholder="Editora de Publicação"
+				[(ngModel)]="editora"
+			/>
+		</mat-form-field>
+		<mat-form-field floatLabel="never" class="input" id="disponivel">
+			<input
+				matInput
+				type="text"
+				name="txtDisponibilidade"
+				disabled
+				id="txtDisponibilidade"
+				placeholder="Disponibilidade"
+				[(ngModel)]="disponivel"
+			/>
+		</mat-form-field>
+		<mat-form-field class="input" id="genero">
+			<mat-label>Genero</mat-label>
+			<mat-select [(ngModel)]="generoId">
+				<mat-option
+					*ngFor="let genero of generos"
+					value="{{ genero.id }}"
+					placeholder="Genero"
+					#forGenero
+				>
+					{{ genero.id }} - {{ genero.generoLivro }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</mat-card-content>
+	<button class="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+</mat-card>
+<mat-card class="box" id="listar">
+	<mat-card-header class="headerBox">
+		<mat-card-title> Lista de Livros </mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<table>
+			<tr>
+				<th>Código</th>
+				<th>Titulo</th>
+				<th>Autor</th>
+				<th>Genero</th>
+				<th>Disponibilidade</th>
+			</tr>
+			<tr *ngFor="let livro of livros" #forLivro>
+				<td>{{ livro.id }}</td>
+				<td>
+					{{ livro.titulo }}
+				</td>
+				<td>
+					{{ livro.autor }}
+				</td>
+				<td>
+					{{ livro.generoLivro }}
+				</td>
+				<td>
+					{{ livro.disponivel }}
+				</td>
+				<td>
+					<button class="btnAlterarItem" (click)="editarLivro(livro.id!)">
+						<fa-icon [icon]="faPen" class="icon"></fa-icon>
+					</button>
+					<button class="btnAlterarItem" (click)="excluirLivro(livro.id!)">
+						<fa-icon [icon]="faTrash" class="icon"></fa-icon>
+					</button>
+				</td>
+			</tr>
+		</table>
+	</mat-card-content>
+</mat-card>
