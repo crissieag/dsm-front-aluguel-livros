@@ -4,6 +4,7 @@ import { AppComponent } from "./app.component";
 import { ClientesComponent } from "./pages/clientes/clientes.component";
 import { EmprestimosComponent } from "./pages/emprestimos/emprestimos.component";
 import { FuncionariosComponent } from "./pages/funcionarios/funcionarios.component";
+import { EditarComponent } from "./pages/generos/editar/editar.component";
 import { GenerosComponent } from "./pages/generos/generos.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { LivrosComponent } from "./pages/livros/livros.component";
@@ -16,6 +17,10 @@ const routes: Routes = [
 	{
 		path: "pages/generos",
 		component: GenerosComponent,
+	},
+		{
+		path: "pages/generos/editar/:id",
+		component: EditarComponent,
 	},
 	{
 		path: "pages/emprestimos",
