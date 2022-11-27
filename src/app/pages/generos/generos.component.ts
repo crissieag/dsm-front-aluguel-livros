@@ -13,6 +13,11 @@ import { Genero } from "src/app/models/genero";
 	styleUrls: ["./generos.component.css"],
 })
 export class GenerosComponent implements OnInit {
+	constructor(
+		private http: HttpClient,
+		private router: Router 
+	) {}
+	
 	generos!: Genero[];
 
 	id?: number;
@@ -21,11 +26,6 @@ export class GenerosComponent implements OnInit {
 	faTrash = faTrash;
 	faPen = faPen;
 
-	constructor(
-		private http: HttpClient,
-		private router: Router,
-		public dialog: MatDialog
-	) {}
 
 	ngOnInit(): void {
 		this.http.get<Genero[]>("https://localhost:5001/api/generos").subscribe({
@@ -34,11 +34,6 @@ export class GenerosComponent implements OnInit {
 			},
 		});
 	}
-
-    // @ViewChildren("forGenero") forGenero:QueryList<ElementRef>;
-    // ngAfterViewInit() {
-    // this.forGenero.toArray().filter(r => r.nativeElement.hasAttribute(this.id))
-    // }
 
 	cadastrar(): void {
 		let genero: Genero = {
@@ -56,10 +51,7 @@ export class GenerosComponent implements OnInit {
 			id: this.id,
 			generoLivro: this.generoLivro,
 		};
-
-		this.http
-			.patch<Genero>(`https://localhost:5001/api/generos/editar/${id}`, genero)
-			.subscribe({ next: (genero) => this.generos.push(genero) });
+		this.router.navigate([`pages/generos/editar/${id}`])
 	}
 
 	excluirGenero(id: number): void {

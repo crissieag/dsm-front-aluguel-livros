@@ -27,7 +27,7 @@ body {
 .box {
 	background-color: #ffffff;
 	margin: 15px auto;
-	max-width: 389px;
+	max-width: 550px;
 	box-shadow: 0 20px 51px 0 rgba(108, 99, 97, 0.075);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
@@ -59,9 +59,12 @@ body {
 .input {
 	display: block;
 	color: var(--fontColor);
-	border-bottom: 1px solid var(--green);
 	width: 350px;
-	margin: 20px 16px;
+	margin: 0 16px;
+}
+
+.input:focus{
+		color: var(--fontColor);
 }
 
 .inputEdit{
@@ -82,7 +85,11 @@ body {
 
 }
 
-table{
+table {
 	margin: 0 auto;
 	text-align: center;	
+}
+
+td {
+	width: 150px;
 }
