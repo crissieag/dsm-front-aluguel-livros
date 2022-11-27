@@ -1,4 +1,41 @@
-.navbarContainer {
+.navbarContainer{	
+	height: 100vh;
+}
+
+.navBar{
+	background: #161616;
+	border-right: 1px solid rgb(243, 243, 243);
+}
+
+.teste{
+	padding: 15px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.teste > a{
+	padding-top: 20px;
+}
+
+a:hover{
+	color: var(--orangeLight);
+	background-color: var(--darkGrey);
+}
+
+.navItem{
+	color: #fff;
+	font-size: 16px;
+}
+
+.icon {
+	margin-right: 20px;
+}
+
+.mainContainer {
+	padding: 20px;
+	background-color: #fefafa;
+} 
+/* .navbarContainer {
 	position: absolute;
 	top: 60px;
 	bottom: 0;
@@ -31,4 +68,4 @@ a:hover{
 .mainContainer {
 	padding: 25px 0;
 	background-color: #fefafa;
-}
+} */
