@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
+
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
@@ -8,8 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class ClientesComponent implements OnInit {
 
   constructor() { }
+  nome?: string
+  cpf?: string
+
+
+  faTrash = faTrash;
+	faPen = faPen;
 
   ngOnInit(): void {
   }
+
+  cadastrar(): void{
+
+  }
+
+  // Passar o parãmetro ID e mudar no HTML também
+  editarCliente(): void {}
+
+	excluirCliente(): void {}
 
 }
