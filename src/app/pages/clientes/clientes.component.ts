@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Cliente } from 'src/app/models/cliente';
 import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
