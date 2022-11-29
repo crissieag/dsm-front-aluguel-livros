@@ -35,10 +35,10 @@
                 <th>Nome</th>
                 <th>CPF</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Teste</td>
-                <td>12345678900</td>
+            <tr *ngFor="let funcionario of funcionarios">
+                <td> {{ funcionario.id }}</td>
+                <td> {{ funcionario.nome }}</td>
+                <td> {{ funcionario.cpf }}</td>
                 <td>
 					<button class="btnAlterarItem" (click)="editarFuncionario()">
 						<fa-icon [icon]="faPen" class="icon"></fa-icon>
