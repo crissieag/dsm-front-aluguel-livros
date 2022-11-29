@@ -35,10 +35,10 @@
                 <th>Nome</th>
                 <th>CPF</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Teste</td>
-                <td>12345678900</td>
+            <tr *ngFor="let cliente of clientes">
+                <td>{{ cliente.id}}</td>
+                <td>{{ cliente.nome}}</td>
+                <td>{{ cliente.cpf}}</td>
                 <td>
 					<button class="btnAlterarItem" (click)="editarCliente()">
 						<fa-icon [icon]="faPen" class="icon"></fa-icon>
