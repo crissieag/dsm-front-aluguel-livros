@@ -4,31 +4,45 @@
     </mat-card-header>
     <mat-card-content>
         <mat-form-field>
-            <mat-select id="livro" [(ngModel)]="livro" placeholder="Livro">
-                <mat-option>
+            <mat-select id="livro" [(ngModel)]="livroId" placeholder="Livro">
+                <mat-option *ngFor="let livro of livros" value="{{ livro.id }}">
+                    {{ livro.id }} - {{ livro.titulo }}
                 </mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field>
-            <mat-select id="cliente" [(ngModel)]="cliente" placeholder="Cliente">
-                <mat-option>
+            <mat-select id="cliente" [(ngModel)]="clienteId" placeholder="Cliente">
+                <mat-option *ngFor="let cliente of clientes" value="{{ cliente.id }}">
+                    {{ cliente.id }} - {{ cliente.nome }}
                 </mat-option>
             </mat-select>
         </mat-form-field>
 
-        <!-- <mat-form-field>
+        <mat-form-field>
             <input
 				matInput
 				type="date"
-				name="dateEmrestimo"
-				id="dateEmrestimo"
-				placeholder="Data de Empréstimo"/>
-        </mat-form-field> -->
+				name="dateEmprestimo"
+				id="dateEmprestimo"
+				placeholder="Data de Empréstimo"
+                [(ngModel)]="dataEmprestimo"/>
+        </mat-form-field>
 
         <mat-form-field>
-            <mat-select id="funcionario" [(ngModel)]="funcionario" placeholder="Funcionario">
-                <mat-option>
+            <input
+				matInput
+				type="date"
+				name="dateDevolucao"
+				id="dateDevolucao"
+				placeholder="Data de Devolução"
+                [(ngModel)]="dataDevolucao"/>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select id="funcionario" [(ngModel)]="funcionarioId" placeholder="Funcionario">
+                <mat-option *ngFor="let funcionario of funcionarios" value="{{ funcionario.id }}">
+                    {{ funcionario.id}} - {{ funcionario.nome }}
                 </mat-option>
             </mat-select>
         </mat-form-field>
@@ -48,17 +62,17 @@
                 <th>Data de Empréstimo</th>
                 <th>Data de Devolução</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Turma da Mônica</td>
-                <td>Usuário</td>
-                <td>01/11/2022</td>
-                <td>15/11/2022</td>
+            <tr *ngFor="let emprestimo of emprestimos">
+                <td>{{ emprestimo.id }}</td>
+                <td>{{ emprestimo.livroID }}</td>
+                <td>{{ emprestimo.clienteID}}</td>
+                <td>{{ emprestimo.dataEmprestimo}}</td>
+                <td>{{ emprestimo.dataDevolucao}}</td>
                 <td>
-					<button class="btnAlterarItem" (click)="excluirEmprestimo()">
-						<fa-icon [icon]="faTrash" class="icon"></fa-icon>
-					</button>
-				</td>
+                    <button class="btnAlterarItem" (click)="excluirEmprestimo()">
+                        <fa-icon [icon]="faTrash" class="icon"></fa-icon>
+                    </button>
+                </td>
             </tr>
         </table>
     </mat-card-content>

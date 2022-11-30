@@ -13,6 +13,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from "@angular/material/select";
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 import { AppComponent } from './app.component';
@@ -56,8 +57,7 @@ import { EditarLivroComponent } from './pages/livros/editar-livro/editar-livro.c
     MatInputModule,
     MatDialogModule,
     MatSelectModule,
-
-
+    MatDatepickerModule,
 
   ],
   providers: [],
