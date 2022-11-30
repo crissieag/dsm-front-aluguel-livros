@@ -24,6 +24,8 @@ export class EditarComponent implements OnInit {
 				let { id } = params;
 				if (id !== undefined) {
 					this.id = id;
+
+					
 					this.http
 						.get<Genero>(
 							`https://localhost:5001/api/generos/listar/byId?id=${id}`
@@ -40,8 +42,8 @@ export class EditarComponent implements OnInit {
 
 	editar(): void {
 		let genero: Genero = {
-			...this.genero, 
-      generoLivro: this.generoLivro
+			...this.genero,
+			generoLivro: this.generoLivro,
 		};
 
 		this.http
@@ -49,6 +51,6 @@ export class EditarComponent implements OnInit {
 				`https://localhost:5001/api/generos/editar/${this.id}`,
 				genero
 			)
-      .subscribe({ next: (genero) => this.router.navigate(["pages/generos"]) });
+			.subscribe({ next: (genero) => this.router.navigate(["pages/generos"]) });
 	}
 }

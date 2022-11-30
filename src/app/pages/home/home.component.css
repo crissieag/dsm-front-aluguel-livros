@@ -1,0 +1,7 @@
+.cardButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 546px;
+	margin: 0 auto;
+}
