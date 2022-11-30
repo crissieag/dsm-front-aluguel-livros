@@ -1,9 +1,9 @@
 export interface Emprestimo {
     id?: number;
-    dataEmprestimo?: string;
-    dataDevolucao?: string;
+    dataEmprestimo?: Date;
+    dataDevolucao?: Date;
     clienteID?: number;
     livroID?: number;
     funcionarioID?: number;
-    status?: boolean;
+    finalizado?: boolean;
 }

@@ -13,6 +13,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from "@angular/material/select";
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 import { AppComponent } from './app.component';
@@ -53,10 +54,8 @@ import { EditarComponent } from './pages/generos/editar/editar.component';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-        MatSelectModule,
-
-
-
+    MatSelectModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
