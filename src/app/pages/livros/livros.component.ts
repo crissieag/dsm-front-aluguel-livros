@@ -32,7 +32,7 @@ export class LivrosComponent implements OnInit {
 	disponivel?: boolean;
 	generoId?: number;
 	publicacao?: string;
-      generoLivro?: string;
+    generoLivro?: string;
 
 
 	faTrash = faTrash;
@@ -59,7 +59,7 @@ export class LivrosComponent implements OnInit {
 			paginas: this.paginas,
 			isbn: this.isbn,
 			editora: this.editora,
-			disponivel: this.disponivel,
+			disponivel: true,
 			generoId: this.generoId,
 			publicacao: this.publicacao
 		};
@@ -67,6 +67,8 @@ export class LivrosComponent implements OnInit {
 		this.http
 			.post<Livro>("https://localhost:5001/api/livros/cadastrar", livro)
 			.subscribe({ next: (livro) => this.livros.push(livro) });
+
+			console.log(livro);
 	}
 
 	editarLivro(id: number): void {}
