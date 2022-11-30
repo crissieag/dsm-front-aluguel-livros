@@ -4,11 +4,8 @@ body,
 html {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
-}
-
-body {
-	margin: 0;
 }
 
 :root {
@@ -26,8 +23,8 @@ body {
 
 .box {
 	background-color: #ffffff;
-	margin: 15px auto;
-	max-width: 550px;
+	margin: 10px 10px;
+	/* max-width: 550px; */
 	box-shadow: 0 20px 51px 0 rgba(108, 99, 97, 0.075);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
@@ -40,8 +37,8 @@ body {
 }
 
 .btnCadastrar {
-	margin: 20px auto 0;
-	display: flex;
+	/* margin: 20px auto 0; */
+	/* display: flex; */
 	color: var(--orangeLighter);
 	background-color: var(--darkGrey);
 	border: none;
@@ -64,7 +61,7 @@ body {
 }
 
 .input:focus{
-		color: var(--fontColor);
+	color: var(--fontColor);
 }
 
 .inputEdit{
@@ -91,5 +88,5 @@ table {
 }
 
 td {
-	width: 150px;
+	width: 200px;
 }

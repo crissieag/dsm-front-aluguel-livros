@@ -1,1 +1,65 @@
-<p>emprestimos works!</p>
+<mat-card class="box" id="cadastrar">
+    <mat-card-header class="headerBox">
+        <mat-card-title> Cadastrar Empréstimo </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-select id="livro" [(ngModel)]="livro" placeholder="Livro">
+                <mat-option>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select id="cliente" [(ngModel)]="cliente" placeholder="Cliente">
+                <mat-option>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+            <input
+				matInput
+				type="date"
+				name="dateEmrestimo"
+				id="dateEmrestimo"
+				placeholder="Data de Empréstimo"/>
+        </mat-form-field> -->
+
+        <mat-form-field>
+            <mat-select id="funcionario" [(ngModel)]="funcionario" placeholder="Funcionario">
+                <mat-option>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+    <button class="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+</mat-card>
+<mat-card>
+    <mat-card-header class="headerBox">
+        <mat-card-title> Lista de Empréstimos </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Livro</th>
+                <th>Cliente</th>
+                <th>Data de Empréstimo</th>
+                <th>Data de Devolução</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Turma da Mônica</td>
+                <td>Usuário</td>
+                <td>01/11/2022</td>
+                <td>15/11/2022</td>
+                <td>
+					<button class="btnAlterarItem" (click)="excluirEmprestimo()">
+						<fa-icon [icon]="faTrash" class="icon"></fa-icon>
+					</button>
+				</td>
+            </tr>
+        </table>
+    </mat-card-content>
+</mat-card>

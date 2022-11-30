@@ -1,27 +1,26 @@
 <mat-sidenav-container class="navbarContainer">
 	<mat-sidenav class="navBar" opened mode="side">
 		<mat-nav-list class="teste">
-			<a mat-list-item routerLink="/pages/clientes">
+			<a mat-list-item routerLink="/pages/funcionarios" class="navItem">
+				<fa-icon [icon]="faUsers" class="icon"></fa-icon>Funcionarios
+			</a>
+			<a mat-list-item routerLink="/pages/clientes" class="navItem">
 				<fa-icon [icon]="faBookOpenReader" class="icon"></fa-icon>
 				Clientes
 			</a>
-			<a mat-list-item routerLink="/pages/emprestimos">
+			<a mat-list-item routerLink="/pages/emprestimos" class="navItem">
 				<fa-icon [icon]="faCalendar" class="icon"></fa-icon>
 				Empréstimos
 			</a>
-			<a mat-list-item routerLink="/pages/funcionarios">
-				<fa-icon [icon]="faUsers" class="icon"></fa-icon>
-				Funcionarios
-			</a>
-			<a mat-list-item routerLink="/pages/generos">
+			<a mat-list-item routerLink="/pages/generos" class="navItem">
 				<fa-icon [icon]="faBookmark" class="icon"></fa-icon>
 				Generos
 			</a>
-			<a mat-list-item routerLink="/pages/livros">
+			<a mat-list-item routerLink="/pages/livros" class="navItem">
 				<fa-icon [icon]="faBook" class="icon"></fa-icon>
 				Livros
 			</a>
-			<a mat-list-item routerLink="/pages/home">
+			<a mat-list-item routerLink="/pages/home" class="navItem">
 				<fa-icon [icon]="faLandmark" class="icon"></fa-icon>
 				Home
 			</a>
