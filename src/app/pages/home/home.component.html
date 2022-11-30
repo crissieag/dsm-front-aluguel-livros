@@ -1,1 +1,22 @@
-<p>home works!</p>
+<mat-card class="box" id="cadastrar">
+	<mat-card-header class="headerBox">
+		<mat-card-title> Seja bem-vindo(a) </mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<p>
+			Para realizar a navegação, você acessar o menu lateral ou clicar nos
+			botões abaixo:
+		</p>
+	</mat-card-content>
+	<div class="cardButton">
+		<button class="btnCadastrar" (click)="rotaLivros()">Livros</button>
+		<button class="btnCadastrar" (click)="rotaGeneros()">Gêneros</button>
+		<button class="btnCadastrar" (click)="rotaEmprestimos()">
+			Empréstimos
+		</button>
+		<button class="btnCadastrar" (click)="rotaClientes()">Clientes</button>
+		<button class="btnCadastrar" (click)="rotaFuncionarios()">
+			Funcionários
+		</button>
+	</div>
+</mat-card>
