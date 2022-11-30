@@ -5,10 +5,6 @@ import { Component, OnInit } from "@angular/core";
 import { Livro } from "src/app/models/livro";
 import { Genero } from "src/app/models/genero";
 import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
-interface Food {
-	value: string;
-	viewValue: string;
-}
 @Component({
 	selector: "app-livros",
 	templateUrl: "./livros.component.html",
@@ -16,12 +12,8 @@ interface Food {
 })
 export class LivrosComponent implements OnInit {
 	constructor(private http: HttpClient, private router: Router) {}
-	foods: Food[] = [
-		{ value: "steak-0", viewValue: "Steak" },
-		{ value: "pizza-1", viewValue: "Pizza" },
-		{ value: "tacos-2", viewValue: "Tacos" },
-	];
-	generos: Genero[] = [{ id: 123, generoLivro: "Romance" }];
+
+	generos: Genero[] = [];
 	livros!: Livro[];
 	id?: number;
 	titulo?: string;
@@ -32,8 +24,7 @@ export class LivrosComponent implements OnInit {
 	disponivel?: boolean;
 	generoId?: number;
 	publicacao?: string;
-      generoLivro?: string;
-
+	generoLivro?: string;
 
 	faTrash = faTrash;
 	faPen = faPen;
@@ -61,7 +52,7 @@ export class LivrosComponent implements OnInit {
 			editora: this.editora,
 			disponivel: this.disponivel,
 			generoId: this.generoId,
-			publicacao: this.publicacao
+			publicacao: this.publicacao,
 		};
 
 		this.http
@@ -69,7 +60,27 @@ export class LivrosComponent implements OnInit {
 			.subscribe({ next: (livro) => this.livros.push(livro) });
 	}
 
-	editarLivro(id: number): void {}
+	editarLivro(id: number): void {
+		let livro: Livro = {
+			titulo: this.titulo,
+			autor: this.autor,
+			paginas: this.paginas,
+			isbn: this.isbn,
+			editora: this.editora,
+			disponivel: this.disponivel,
+			generoId: this.generoId,
+			publicacao: this.publicacao,
+		};
+		this.router.navigate([`pages/livros/editar/${id}`])
+	}
 
-	excluirLivro(id: number): void {}
+	excluirLivro(id: number): void {
+		this.http
+			.delete<Livro>(`https://localhost:5001/api/livros/deletar/${id}`)
+			.subscribe({
+				next: () => {
+					this.livros = this.livros.filter((value) => value.id != id);
+				},
+			});
+	}
 }

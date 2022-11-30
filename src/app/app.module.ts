@@ -25,6 +25,7 @@ import { FuncionariosComponent } from './pages/funcionarios/funcionarios.compone
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EditarComponent } from './pages/generos/editar/editar.component';
+import { EditarLivroComponent } from './pages/livros/editar-livro/editar-livro.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EditarComponent } from './pages/generos/editar/editar.component';
     ClientesComponent,
     FuncionariosComponent,
     HomeComponent,
-    EditarComponent
+    EditarComponent,
+    EditarLivroComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,7 @@ import { EditarComponent } from './pages/generos/editar/editar.component';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-        MatSelectModule,
+    MatSelectModule,
 
 
 
