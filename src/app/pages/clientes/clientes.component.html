@@ -40,10 +40,10 @@
                 <td>{{ cliente.nome}}</td>
                 <td>{{ cliente.cpf}}</td>
                 <td>
-					<button class="btnAlterarItem" (click)="editarCliente()">
+					<button class="btnAlterarItem" (click)="editarCliente(cliente.id!)">
 						<fa-icon [icon]="faPen" class="icon"></fa-icon>
 					</button>
-					<button class="btnAlterarItem" (click)="excluirCliente()">
+					<button class="btnAlterarItem" (click)="excluirCliente(cliente.id!)">
 						<fa-icon [icon]="faTrash" class="icon"></fa-icon>
 					</button>
 				</td>

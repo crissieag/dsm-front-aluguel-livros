@@ -1,3 +1,6 @@
+import { Cliente } from "./cliente";
+import { Livro } from "./livro";
+
 export interface Emprestimo {
     id?: number;
     dataEmprestimo?: Date;
@@ -8,4 +11,6 @@ export interface Emprestimo {
     finalizado?: boolean;
     livroNome?: string;
     clienteNome?: string;
+    livro?: Livro;
+    cliente?: Cliente;
 }

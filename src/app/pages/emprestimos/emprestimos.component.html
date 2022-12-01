@@ -61,15 +61,20 @@
                 <th>Cliente</th>
                 <th>Data de Empréstimo</th>
                 <th>Data de Devolução</th>
+                <th>Status</th>
             </tr>
             <tr *ngFor="let emprestimo of emprestimos">
                 <td>{{ emprestimo.id }}</td>
-                <td>{{ emprestimo.livroId }}</td>
-                <td>{{ emprestimo.clienteId }}</td>
+                <td>{{ emprestimo.livro?.titulo }}</td>
+                <td>{{ emprestimo.cliente?.nome }}</td>
                 <td>{{ emprestimo.dataEmprestimo}}</td>
                 <td>{{ emprestimo.dataDevolucao}}</td>
+                <td>{{ emprestimo.finalizado ?  "Finalizado" : "Aberto" }}</td>
                 <td>
-                    <button class="btnAlterarItem" (click)="excluirEmprestimo()">
+                    <button class="btnAlterarItem" (click)="editarEmprestimo(emprestimo.id!)">
+                        <fa-icon [icon]="faPen" class="icon"></fa-icon>
+                    </button>
+                    <button class="btnAlterarItem" (click)="excluirEmprestimo(emprestimo.id!)">
                         <fa-icon [icon]="faTrash" class="icon"></fa-icon>
                     </button>
                 </td>

@@ -50,8 +50,23 @@ export class ClientesComponent implements OnInit {
   }
 
   // Passar o parâmetro ID e mudar no HTML também
-  editarCliente(): void {}
+  editarCliente(id: number ): void {
+    let cliente: Cliente = {
+      id: this.id,
+      nome: this.nome,
+      cpf: this.cpf
+    };
+    this.router.navigate([`pages/clientes/editar/${id}`])
+  }
 
-	excluirCliente(): void {}
+	excluirCliente(id: number): void {
+    this.http
+			.delete<Cliente>(`https://localhost:5001/api/clientes/deletar/${id}`)
+			.subscribe({
+				next: () => {
+					this.clientes = this.clientes.filter((value) => value.id != id);
+				},
+			});
+  }
 
 }

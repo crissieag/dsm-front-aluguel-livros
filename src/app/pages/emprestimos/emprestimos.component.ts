@@ -87,6 +87,16 @@ export class EmprestimosComponent implements OnInit {
     console.log(emprestimo);
   }
 
-	excluirEmprestimo(): void {}
+  editarEmprestimo(id: number): void {
+    let emprestimo: Emprestimo = {
+      id: this.id,
+      finalizado: this.finalizado,
+      dataDevolucao: new Date(this.dataDevolucao)
+    };
+    this.router.navigate([`pages/emprestimos/editar/${id}`])
+  }
+
+
+	excluirEmprestimo(id: number): void {}
 
 }

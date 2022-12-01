@@ -40,10 +40,10 @@
                 <td> {{ funcionario.nome }}</td>
                 <td> {{ funcionario.cpf }}</td>
                 <td>
-					<button class="btnAlterarItem" (click)="editarFuncionario()">
+					<button class="btnAlterarItem" (click)="editarFuncionario(funcionario.id!)">
 						<fa-icon [icon]="faPen" class="icon"></fa-icon>
 					</button>
-					<button class="btnAlterarItem" (click)="excluirFuncionario()">
+					<button class="btnAlterarItem" (click)="excluirFuncionario(funcionario.id!)">
 						<fa-icon [icon]="faTrash" class="icon"></fa-icon>
 					</button>
 				</td>

@@ -48,8 +48,23 @@ export class FuncionariosComponent implements OnInit {
   }
 
   // Passar o parãmetro ID e mudar no HTML também
-  editarFuncionario(): void {}
+  editarFuncionario(id: number): void {
+    let funcionario: Funcionario = {
+      id: this.id,
+      nome: this.nome,
+      cpf: this.cpf
+    };
+    this.router.navigate([`pages/funcionarios/editar/${id}`])
+  }
 
-	excluirFuncionario(): void {}
+	excluirFuncionario(id: number): void {
+    this.http
+			.delete<Funcionario>(`https://localhost:5001/api/funcionarios/deletar/${id}`)
+			.subscribe({
+				next: () => {
+					this.funcionarios = this.funcionarios.filter((value) => value.id != id);
+				},
+			});
+  }
 
 }
