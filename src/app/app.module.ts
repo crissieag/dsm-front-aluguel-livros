@@ -59,8 +59,6 @@ import { EditarLivroComponent } from './pages/livros/editar-livro/editar-livro.c
     MatSelectModule,
     MatDatepickerModule,
 
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
