@@ -31,6 +31,9 @@ export class EmprestimosComponent implements OnInit {
   dataEmprestimo!: string;
   dataDevolucao!: string;
 
+  livroNome?: string;
+  clienteNome?: string;
+
   id?: number;
   finalizado?: boolean;
 
@@ -70,10 +73,11 @@ export class EmprestimosComponent implements OnInit {
       id: this.id,
       dataEmprestimo: new Date(this.dataEmprestimo),
       dataDevolucao: new Date(this.dataDevolucao),
-      clienteID: Number(this.clienteId),
-      livroID: Number(this.livroId),
-      funcionarioID: Number(this.funcionarioId),
+      clienteId: Number(this.clienteId),
+      livroId: Number(this.livroId),
+      funcionarioId: Number(this.funcionarioId),
       finalizado: this.finalizado,
+      clienteNome: this.clienteNome
     };
 
     this.http
@@ -83,6 +87,16 @@ export class EmprestimosComponent implements OnInit {
     console.log(emprestimo);
   }
 
-	excluirEmprestimo(): void {}
+  editarEmprestimo(id: number): void {
+    let emprestimo: Emprestimo = {
+      id: this.id,
+      finalizado: this.finalizado,
+      dataDevolucao: new Date(this.dataDevolucao)
+    };
+    this.router.navigate([`pages/emprestimos/editar/${id}`])
+  }
+
+
+	excluirEmprestimo(id: number): void {}
 
 }

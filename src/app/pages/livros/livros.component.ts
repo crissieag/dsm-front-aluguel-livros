@@ -24,7 +24,7 @@ export class LivrosComponent implements OnInit {
 	disponivel?: boolean;
 	generoId?: number;
 	publicacao?: string;
-  generoLivro?: string;
+   generoLivro?: string;
 
 	faTrash = faTrash;
 	faPen = faPen;

@@ -27,6 +27,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EditarComponent } from './pages/generos/editar/editar.component';
 import { EditarLivroComponent } from './pages/livros/editar-livro/editar-livro.component';
+import { EditarFuncionariosComponent } from './pages/funcionarios/editar-funcionarios/editar-funcionarios.component';
+import { EditarClientesComponent } from './pages/clientes/editar-clientes/editar-clientes.component';
+import { EditarEmprestimoComponent } from './pages/emprestimos/editar-emprestimo/editar-emprestimo.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { EditarLivroComponent } from './pages/livros/editar-livro/editar-livro.c
     FuncionariosComponent,
     HomeComponent,
     EditarComponent,
-    EditarLivroComponent
+    EditarLivroComponent,
+    EditarFuncionariosComponent,
+    EditarClientesComponent,
+    EditarEmprestimoComponent
   ],
   imports: [
     BrowserModule,
