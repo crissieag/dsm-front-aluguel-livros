@@ -10,7 +10,7 @@
 				name="txtLivro"
 				id="txtLivro"
 				placeholder="{{ livro.titulo }}"
-				[(ngModel)]="titulo"
+				[(ngModel)]="livro.titulo"
 			/>
 		</mat-form-field>
 		<mat-form-field floatLabel="never" class="input" id="autor">
@@ -20,7 +20,7 @@
 				name="txtAutor"
 				id="txtAutor"
 				placeholder="{{ livro.autor }}"
-				[(ngModel)]="autor"
+				[(ngModel)]="livro.autor"
 			/>
 		</mat-form-field>
 		<mat-form-field floatLabel="never" class="input" id="publicacao">
@@ -30,7 +30,7 @@
 				name="txtPublicacao"
 				id="txtPublicacao"
 				placeholder="{{ livro.publicacao }}"
-				[(ngModel)]="publicacao"
+				[(ngModel)]="livro.publicacao"
 			/>
 		</mat-form-field>
 		<mat-form-field floatLabel="never" class="input" id="paginas">
@@ -40,7 +40,7 @@
 				name="txtPaginas"
 				id="txtPaginas"
 				placeholder="{{ livro.paginas }}"
-				[(ngModel)]="paginas"
+				[(ngModel)]="livro.paginas"
 			/>
 		</mat-form-field>
 		<mat-form-field floatLabel="never" class="input" id="editora">
@@ -50,12 +50,12 @@
 				name="txtEditora"
 				id="txtEditora"
 				placeholder="{{ livro.editora }}"
-				[(ngModel)]="editora"
+				[(ngModel)]="livro.editora"
 			/>
 		</mat-form-field>
 		<mat-form-field class="input" id="genero">
 			<mat-label>Genero</mat-label>
-			<mat-select [(ngModel)]="generoId">
+			<mat-select [(ngModel)]="livro.generoId">
 				<mat-option
 					*ngFor="let genero of generos"
 					value="{{ genero.id }}"

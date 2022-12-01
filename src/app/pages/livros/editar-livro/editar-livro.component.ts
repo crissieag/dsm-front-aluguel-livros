@@ -70,7 +70,7 @@ export class EditarLivroComponent implements OnInit {
 
 		this.http
 			.patch<Genero>(
-				`https://localhost:5001/api/generos/editar/${this.id}`,
+				`https://localhost:5001/api/livros/editar/${this.id}`,
 				livro
 			)
 			.subscribe({ next: (livro) => this.router.navigate(["pages/livros"]) });
